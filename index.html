@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FODA Cruzado - Practicante Desarrollo Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+        font-family: 'Rajdhani', sans-serif;
+        background: linear-gradient(135deg, #262626, #1a1a1a); 
+        color: #f0f0f0;
+        overflow-x: hidden;
+    }
+    
+    #portfolio {
+        background: linear-gradient(135deg, #38598b, #1d3557); 
+        padding: 4rem;
+        border-radius: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); 
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #portfolio img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 8px solid #8aa2a87e; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); 
+    border-radius: 50%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+    
+    #portfolio img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); 
+    }
+    
+    .social-icons a {
+        font-size: 2.4rem;
+        color: #f0f0f0;
+        transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        color: #b49255;
+        transform: translateY(-3px);
+    }
+    
+    table {
+        background-color: #262626;
+        border-radius: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    }
+    
+    table th {
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #607d8b; /* Nuevo color gris */
+        color: #f0f0f0;
+        padding: 1.5rem;
+    }
+    
+    table td {
+        padding: 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    table td:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .bg-green-700 {
+        background-color: #006d77; /* Puedes cambiar este color si lo deseas */
+    }
+    
+    .bg-red-700 {
+        background-color: #e63946;
+    }
+    
+    .reveal-text {
+        overflow: hidden;
+    }
+    
+    .reveal-text span {
+        display: inline-block;
+        transform: translateY(100%);
+        animation: revealText 1s forwards;
+    }
+    
+    .reveal-text span:nth-child(1) { animation-delay: 0.2s; }
+    .reveal-text span:nth-child(2) { animation-delay: 0.4s; }
+    .reveal-text span:nth-child(3) { animation-delay: 0.6s; }
+    
+    @keyframes revealText {
+        to {
+            transform: translateY(0);
+        }
+    }
+    
+    .changing-text {
+        overflow: hidden;
+        height: 2em;
+    }
+    
+    .changing-text span {
+        display: block;
+        animation: slideText 8s infinite;
+    }
+    
+    @keyframes slideText {
+        0% { transform: translateY(0); }
+        33% { transform: translateY(-100%); }
+        66% { transform: translateY(-200%); }
+        100% { transform: translateY(0); }
+    }
+    
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    p {
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 768px) {
+        #portfolio {
+            padding: 2rem;
+        }
+        #portfolio img {
+            width: 180px;
+            height: 180px;
+        }
+        .social-icons a {
+            font-size: 2rem;
+        }
+        table {
+            font-size: 0.9rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    .textos{
+      font-size: larger;
+
+    }
+    /* ... (estilos anteriores) ... */
+
+.social-icons a {
+    font-size: 2.4rem;
+    color: #f0f0f0;
+    transition: all 0.3s ease; /* Transición para suavizar las animaciones */
+}
+
+.social-icons a:hover {
+    color: #b49255; /* Dorado al pasar el mouse */
+    transform: translateY(-3px); /* Movimiento hacia arriba */
+}
+
+.social-icons a .fa-github:hover {
+    animation: rotate 1s linear infinite; /* Animación de rotación para GitHub */
+}
+
+.social-icons a .fa-whatsapp:hover {
+    animation: shake 0.5s linear infinite; /* Animación de temblor para WhatsApp */
+}
+
+.social-icons a .fa-linkedin:hover {
+    animation: pulse 1s ease infinite; /* Animación de pulso para LinkedIn */
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+    </style>
+    
+</head>
+<body>
+
+<div class="container mx-auto px-4 py-8">
+ 
+
+  <div class="container mx-auto px-4 py-8">
+    <section id="portfolio" class="mb-8">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/3 mb-4 md:mb-0">
+          <img src="imagenes/perfil.jpeg" alt="Foto de perfil" class="w-full h-auto rounded-full shadow-lg border-4 border-blue-500"> 
+        </div>
+        <div class="md:w-2/3 md:pl-8">
+          <h2 class="text-3xl font-bold mb-4 text-blue-500 changing-text">
+            <span>Sobre Mí</span>
+            <span>Futuro ingeniero</span>
+            <span>Estudiante del ISTJP</span>
+          </h2>
+          <p class="text-gray-300 leading-relaxed reveal-text">
+              <div class="textos">
+                Estudiante de Computación e Informática apasionado por el desarrollo web back-end con Laravel. Disfruto creando soluciones eficientes y escalables. 
+                Actualmente, trabajo en Epic Games como desarrollador web, donde aplico 
+                mis conocimientos
+               en PHP y Laravel para construir aplicaciones web robustas. 
+              </div>
+              <div class="flex flex-col md:flex-row items-center">
+              </div>
+              <div class="md:w-2/3 md:pl-8">
+                  </div>
+                  <div class="social-icons mt-4 flex space-x-4"> 
+                      <a href="https://github.com/AbrahanDev" target="_blank">
+                          <i class="fab fa-github"></i>
+                      </a>
+                      <a href="https://wa.me/51996096662" target="_blank">
+                          <i class="fab fa-whatsapp"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/TU_USUARIO_LINKEDIN" target="_blank">
+                          <i class="fab fa-linkedin"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+    </section>
+  
+    <h1 class="text-center text-4xl font-bold mb-8 text-blue-500">FODA Cruzado</h1>
+  
+    <table class="w-full table-auto border-collapse shadow-lg">
+      <thead class="bg-blue-900 text-white">
+        <tr>
+          <th class="px-4 py-2"></th>
+          <th class="px-4 py-2">Fortalezas</th>
+          <th class="px-4 py-2">Debilidades</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="bg-green-700 text-white px-4 py-2">Oportunidades</th>
+          <td id="fo" class="border px-4 py-2 border-gray-700">
+            - Industria de videojuegos en constante crecimiento.<br>
+            - Alta demanda de desarrolladores back-end con experiencia en Laravel.<br>
+            - Posibilidad de trabajar en proyectos innovadores y de gran impacto.<br>
+            - Acceso a tecnologías y recursos de vanguardia en la empresa Epic.
+          </td>
+          <td id="do" class="border px-4 py-2 border-gray-700">
+            - Menor experiencia en desarrollo front-end y diseño web.<br>
+            - Conocimientos limitados en otras tecnologías back-end además de Laravel.<br>
+            - Posible falta de experiencia en proyectos de gran escala.<br>
+            - Puede haber áreas de mejora en habilidades de comunicación técnica.
+          </td>
+        </tr>
+        <tr>
+          <th class="bg-red-700 text-white px-4 py-2">Amenazas</th>
+          <td id="fa" class="border px-4 py-2 border-gray-700">
+            - Alta competencia en el sector de desarrollo de videojuegos.<br>
+            - Rápida evolución de las tecnologías, lo que requiere aprendizaje continuo.<br>
+            - Posible saturación del mercado de desarrolladores Laravel.<br>
+            - Cambios en las tendencias de la industria que podrían afectar la demanda de ciertas habilidades.
+          </td>
+          <td id="da" class="border px-4 py-2 border-gray-700">
+            - Dificultad para destacar entre otros desarrolladores Laravel.<br>
+            - Posible falta de oportunidades para desarrollar habilidades de diseño front-end.<br>
+            - Riesgo de estancamiento si no se diversifican las habilidades técnicas.<br>
+            - Presión por mantenerse al día con las últimas actualizaciones de Laravel.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
